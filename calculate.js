@@ -20,7 +20,8 @@ function division(nombreA, nombreB) {
     }
     return nombreA / nombreB;
 }
-
+// On rentre dans la boucle principale
+var restart = false; // Cette variable vaut false ce qui veut dire que par défaut, nous ne reproposons par un calcul.
 // Demande un choix
 do {
     var choix = Number(prompt("Que souhaitez-vous faire ?\n\n 1 - Addition\n 2 - Multiplication\n 3 - Soustraction\n 4 - Division\n"));
@@ -60,4 +61,12 @@ try{
 }
 catch(error) {
     alert(error); // Si une erreur est survenue, on affiche l'erreur
-}
+} 
+while(restart);
+{
+    restart = confirm("Souhaitez-vous recommencer un calcul ?"); // On demande grâce à la boîte de dialogue confirm() si l'utilisateur veut recommencer
+  
+}  
+
+
+
